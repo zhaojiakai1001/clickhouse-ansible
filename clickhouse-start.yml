@@ -1,13 +1,6 @@
-# install clickhouse-server and clickhouse-client then start clickhouse-server
-
-# install
-- hosts:
-  - clickhouse
-  roles:
-  - { role: clickhouse, op: install }
-
-# start
-- hosts:
-  - clickhouse
-  roles:
-  - { role: clickhouse, op: start }
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
